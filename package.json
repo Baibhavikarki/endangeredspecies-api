@@ -1,0 +1,22 @@
+{
+  "name": "endangeredspecies",
+  "version": "1.0.0",
+  "description": "endangered species tracking system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Baibhavikarki/endangeredspecies-api.git"
+  },
+  "author": "team panda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Baibhavikarki/endangeredspecies-api/issues"
+  },
+  "homepage": "https://github.com/Baibhavikarki/endangeredspecies-api#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
