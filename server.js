@@ -48,11 +48,31 @@ app.get("/individuals", async (req,res) => {
   }
 });
 
+app.get("/species", async (req,res) => {
+  try {
+ 
+    const result = await db.collection('species').find().toArray();
+    res.send(result);
+  } catch (err) {
+    console.log(err);
+    res.status(500).send('Error retrieving data');
+  }
+});
+app.get("/species/:speciesId", async (req,res) => {
+  try {
+    const speciesID = parseInt(req.params.speciesId);
+    const result = await db.collection('individuals').find({species_id: speciesID}).toArray();
+    res.send(result);
+  } catch (err) {
+    console.log(err);
+    res.status(500).send('Error retrieving data');
+  }
+});
+
 
 app.get("/sightings/:animalId", async (req,res) => {
   try {
     const animalId = parseInt(req.params.animalId);
-    console.log(animalId)
     const result = await db.collection('sightings').find({animal_id: animalId}).toArray();
     res.send(result);
   } catch (err) {
