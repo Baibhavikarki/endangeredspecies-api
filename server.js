@@ -2,7 +2,7 @@ var express = require("express");
 const cors = require('cors');
 
 var app = express();
-app.use(cors({ origin: 'https://endangered-species-api.herokuapp.com' }));
+app.use(cors({ origin: 'https://endangered-species.herokuapp.com' }));
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
